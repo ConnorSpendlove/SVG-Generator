@@ -1,21 +1,69 @@
-
-function generateSVG(data){
-    if (data.shape = "cirlce"){
-    `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
- <circle cx="150" cy="100" r="80" fill="${data.shapeColor}" />
- <text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text>
-</svg>`
+// Sets parent attricbutes of all shapes.
+class Shape {
+    constructor(text, textColor, shapeColor){
+        this.text = text;
+        this.textColor = textColor,
+        this.shapeColor = shapeColor
     }
-    else if (data.shape = "square"){
-        `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-          <rect width="150" height="150" x="10" y="10" style="${data.shapeColor}"/>
-          <text x="85" y="105" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text>
-        </svg>`
-    }
-    else if (data.shape = "triangle"){
-        ``
-    }
-
 }
+// Makes the circle class inherit attributes from Shape class
+class Circle extends Shape {
+    constructor(shapeColor, text, textColor) {
+        super(shapeColor, text, textColor);
+    }
+    render() {
+        // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+        return  `
+        <svg version="1.1"
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="100" r="100" fill="${this.shapeColor}" />
+            <text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text>
+        </svg>
+        `
+    };
+}
+// Makes the square class inherit attributes from Shape class
+class Square extends Shape {
+    constructor(shapeColor, text, textColor) {
+        super(shapeColor, text, textColor);
+    }
+    render() {
+        // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+        return `
+        <svg version="1.1"
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="${this.shapeColor}"/>
+            <text x="100" y="125" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text>
+        </svg>
+        `
+    };
+}
+// Makes the triangle class inherit attributes from Shape class
+class Triangle extends Shape {
+    constructor(shapeColor, text, textColor) {
+        super(shapeColor, text, textColor);
+    }
+    render() {
+        // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+        return `
+        <svg version="1.1" 
+            width="300" height="200"
+            xmlns="http://www.w3.org/2000/svg">
+            <polygon points="100, 15 200, 200 0, 200" fill="${this.shapeColor}"/>
+            <text x="100" y="185" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text>
+        </svg>
+        `
+    };
+   
+}
+
+function selectUserShape {
+    if(response.shape === "circle"){
+        let newShape = new Circle(response.text, response.textColor, response.shapeColor)
+    }
+}
+
 
 module.exports = generateSVG;
