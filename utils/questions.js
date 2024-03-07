@@ -53,7 +53,7 @@ const questions = [
     {
         type: "input",
         name: "textColor",
-        message: "Please enter a hexadecimal number (#ABCDEF)",
+        message: "Please enter a hexadecimal number (#123456)",
         when: (answers) => {
             if(answers.textColorOptions === 'Hexadecimal') {
                 return true;
@@ -118,7 +118,7 @@ const questions = [
     {
         type: "input",
         name: "shapeColor",
-        message: "Please enter a hexadecimal number (#ABCDEF)",
+        message: "Please enter a hexadecimal number (#123456)",
         when: (answers) => {
             if(answers.shapeColorOptions === 'Hexadecimal') {
                 return true;

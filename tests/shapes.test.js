@@ -1,10 +1,14 @@
+// gets the shape classes 
 const Circle = require("../utils/Circle")
 const Triangle = require("../utils/Triangle")
 const Square = require("../utils/Square")
 
+// tests to see if the svg matches the data that the user puts in
 describe('Circle', () => {
     it('should create a circle that matches the user attributes', () => {
+        // creates new constructer
         const circle = new Circle('SVG','white','lime');
+        // expects the svg to match the constructer
         expect(circle.render()).toEqual(`
         <svg version="1.1"
             width="300" height="200"
