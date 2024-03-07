@@ -1,5 +1,5 @@
 // Sets parent attricbutes of all shapes.
-class Shape {
+module.exports = class Shape {
     constructor(text, textColor, shapeColor){
         this.text = text;
         this.textColor = textColor,
@@ -7,7 +7,7 @@ class Shape {
     }
 }
 // Makes the circle class inherit attributes from Shape class
-class Circle extends Shape {
+module.exports = class Circle extends Shape {
     constructor(shapeColor, text, textColor) {
         super(shapeColor, text, textColor);
     }
@@ -24,7 +24,7 @@ class Circle extends Shape {
     };
 }
 // Makes the square class inherit attributes from Shape class
-class Square extends Shape {
+module.exports = class Square extends Shape {
     constructor(shapeColor, text, textColor) {
         super(shapeColor, text, textColor);
     }
@@ -41,7 +41,7 @@ class Square extends Shape {
     };
 }
 // Makes the triangle class inherit attributes from Shape class
-class Triangle extends Shape {
+module.exports = class Triangle extends Shape {
     constructor(shapeColor, text, textColor) {
         super(shapeColor, text, textColor);
     }
@@ -59,11 +59,18 @@ class Triangle extends Shape {
    
 }
 
-function selectUserShape {
+function selectUserShape() {
     if(response.shape === "circle"){
         let newShape = new Circle(response.text, response.textColor, response.shapeColor)
+        return newShape.render()
+    }
+    if(response.shape === "square"){
+        let newShape = new Square(response.text, response.textColor, response.shapeColor)
+        return newShape.render()
+    }
+    if(response.shape === "triangle"){
+        let newShape = new Triangle(response.text, response.textColor, response.shapeColor)
+        return newShape.render()
     }
 }
 
-
-module.exports = generateSVG;
