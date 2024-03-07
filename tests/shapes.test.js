@@ -1,6 +1,6 @@
-const Circle = require("../utils/createShape")
-const Triangle = require("../utils/createShape")
-const Square = require("../utils/createShape")
+const Circle = require("../utils/Circle")
+const Triangle = require("../utils/Triangle")
+const Square = require("../utils/Square")
 
 describe('Circle', () => {
     it('should create a circle that matches the user attributes', () => {

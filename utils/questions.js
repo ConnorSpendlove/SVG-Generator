@@ -87,7 +87,7 @@ const questions = [
         type: "list",
         name: "shapeColorOptions",
         message: "Please select a method to pick a shape color",
-        choices: ["Color Keyword", "Hexidecimal"]
+        choices: ["Color Keyword", "Hexadecimal"]
     },
     // If the user selects Color Keyword, this object is true
     {

@@ -1,6 +1,6 @@
-const Circle = require("./createShape")
-const Triangle = require("./createShape")
-const Square = require("./createShape")
+const Circle = require("./Circle.js")
+const Triangle = require("./Triangle.js")
+const Square = require("./Square.js")
 
 function selectUserShape(response) {
     if(response.shape === "circle"){

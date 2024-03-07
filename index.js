@@ -1,7 +1,6 @@
 // Requires all neccessary tools and files
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createShape = require('./utils/createShape.js');
 const questions = require('./utils/questions.js');
 const createFile = require('./utils/createFile.js');
 
