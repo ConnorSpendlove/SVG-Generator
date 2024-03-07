@@ -3,7 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateSVG = require('./utils/generateSVG.js');
 const questions = require('./utils/questions.js');
-const colorKeywords = require('./utils/colorKeywords.js');
 
 // Creates a new file
 function writeToFile(fileName, data) {
