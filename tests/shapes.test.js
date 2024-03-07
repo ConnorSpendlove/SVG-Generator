@@ -1,6 +1,6 @@
-const Circle = require("../utils/generateSVG")
-const Triangle = require("../utils/generateSVG")
-const Square = require("../utils/generateSVG")
+const Circle = require("../utils/createShape")
+const Triangle = require("../utils/createShape")
+const Square = require("../utils/createShape")
 
 describe('Circle', () => {
     it('should create a circle that matches the user attributes', () => {

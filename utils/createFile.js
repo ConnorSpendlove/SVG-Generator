@@ -1,6 +1,6 @@
-const Circle = require("../utils/generateSVG")
-const Triangle = require("../utils/generateSVG")
-const Square = require("../utils/generateSVG")
+const Circle = require("./createShape")
+const Triangle = require("./createShape")
+const Square = require("./createShape")
 
 function selectUserShape(response) {
     if(response.shape === "circle"){
