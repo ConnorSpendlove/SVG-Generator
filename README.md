@@ -11,8 +11,7 @@ This application takes user data by using Node.js with npm Inquirer to create a 
 
 Watch this short demonstrative video:
 
-"C:\Users\fruit\Videos\SVG Generator Short Video.mp4"
-  
+https://github.com/ConnorSpendlove/SVG-Generator/assets/151980519/c0bd0b1c-521d-4497-b86d-f3d997373e78
 
 ## Table of Contents
 - [Installation](#installation)
