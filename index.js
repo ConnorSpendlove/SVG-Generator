@@ -3,10 +3,12 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateSVG = require('./utils/generateSVG.js');
 const questions = require('./utils/questions.js');
+const createShape = require('./utils/generateSVG.js');
 
 // Creates a new file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
+function writeToFile(response) {
+  const create = createShape(response)
+    fs.writeFile(fileName, create, err => {
         if (err) {
           return console.log(err);
         }

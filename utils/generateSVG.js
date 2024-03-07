@@ -7,9 +7,11 @@ module.exports = class Shape {
     }
 }
 // Makes the circle class inherit attributes from Shape class
-module.exports = class Circle extends Shape {
-    constructor(shapeColor, text, textColor) {
-        super(shapeColor, text, textColor);
+module.exports = class Circle {
+    constructor(text, textColor, shapeColor) {
+        this.text = text;
+        this.textColor = textColor,
+        this.shapeColor = shapeColor
     }
     render() {
         // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -24,9 +26,11 @@ module.exports = class Circle extends Shape {
     };
 }
 // Makes the square class inherit attributes from Shape class
-module.exports = class Square extends Shape {
-    constructor(shapeColor, text, textColor) {
-        super(shapeColor, text, textColor);
+module.exports = class Square {
+    constructor(text, textColor, shapeColor) {
+        this.text = text;
+        this.textColor = textColor,
+        this.shapeColor = shapeColor
     }
     render() {
         // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -41,9 +45,11 @@ module.exports = class Square extends Shape {
     };
 }
 // Makes the triangle class inherit attributes from Shape class
-module.exports = class Triangle extends Shape {
-    constructor(shapeColor, text, textColor) {
-        super(shapeColor, text, textColor);
+module.exports = class Triangle {
+    constructor(text, textColor, shapeColor) {
+        this.text = text;
+        this.textColor = textColor,
+        this.shapeColor = shapeColor
     }
     render() {
         // svg outline from https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
@@ -59,7 +65,7 @@ module.exports = class Triangle extends Shape {
    
 }
 
-function selectUserShape() {
+function selectUserShape(response) {
     if(response.shape === "circle"){
         let newShape = new Circle(response.text, response.textColor, response.shapeColor)
         return newShape.render()
